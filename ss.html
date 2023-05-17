@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body style="background-color:black">
+  <div class="w3-content w3-section" style="width: 500px;">
+    <img class="mySlides w3-animate-left " src="a.jpg" style="width:100%">
+    <img class="mySlides w3-animate-left " src="b.jpg" style="width:100%">
+    <img class="mySlides w3-animate-fading " src="c.jpg" style="width:100%">
+    <img class="mySlides w3-animate-fading" src="d.jpg"style="width:100%">
+  </div>  
+  <script type="text/javascript">
+    var a=0;
+    carousel();
+
+    function carousel()
+    {
+      var i;
+      var x=document.getElementsByClassName("mySlides");
+      //document.write(x.length);
+      for(i=0;i<x.length;i++)
+      {
+        x[i].style.display="none";
+
+      }
+      a++; 
+      if (a > x.length) { a = 1 }
+      x[a-1].style.display = "block";
+      setTimeout(carousel,5000);
+    }
+  </script>
+</body>
+</html>
